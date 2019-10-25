@@ -6,12 +6,16 @@ python-version: ## Provides the Python version
 	pipenv run python --version
 .PHONY: python-version
 
+setup: ## Sets up the Python environvent with Pipenv
+	pipenv install --dev
+.PHONY: setup
+
 run: ## Run the app
 	pipenv run python -m sample
 .PHONY: run
 
 test: ## Run the tests
-	pipenv run mamba spec --format=documentation
+	@pipenv run mamba spec --format=documentation
 .PHONY: test
 
 repl: ## Fire up the Repl
