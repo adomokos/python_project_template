@@ -1,12 +1,7 @@
 from mamba import description, context, it
 from expects import expect, equal
 
-class Game(object):
-    def __init__(self, player1, player2):
-        pass
-
-    def score(self):
-        return (0, 0)
+from sample.tennis import Game
 
 with description('Tennis') as self:
     with it('starts with 0 - 0 score'):
