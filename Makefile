@@ -11,7 +11,7 @@ run: ## Run the app
 .PHONY: run
 
 test: ## Run the tests
-	pipenv run mamba spec/tennis_spec.py
+	pipenv run mamba spec --format=documentation
 .PHONY: test
 
 repl: ## Fire up the Repl
